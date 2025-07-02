@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - InterviewSense</title>
+
+  <!-- Corrected CSS path for Flask -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/contact-us.css') }}">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lato:wght@400;700;900&family=Karla:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <a href="{{ url_for('home') }}">
+          <img src="{{ url_for('static', filename='img/untitled--tag--us---removebg-preview-2@2x.png') }}" alt="InterviewSense Logo">
+          <div class="brand-name">
+            <span class="brand-interview">Interview</span><span class="brand-sense">Sense</span>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="page-title">Contact Us</h1>
+      
+      <div class="contact-container">
+        <div class="contact-info">
+          <img class="contact-image" src="{{ url_for('static', filename='img/rectangle-11-1.png') }}" alt="Contact Illustration">
+          
+          <div class="info-items">
+            <div class="info-item">
+              <img src="{{ url_for('static', filename='img/rectangle-9.png') }}" alt="Email Icon">
+              <span>InterviewSense.support@gmail.com</span>
+            </div>
+            
+            <div class="info-item">
+              <img src="{{ url_for('static', filename='img/rectangle-10.png') }}" alt="Location Icon">
+              <span>KSA, Medina</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h2>Get in Touch</h2>
+          <p class="subtitle">Any question or remarks? Let us know!</p>
+          
+          <form action="{{ url_for('contact') }}" method="post">
+            <div class="form-group">
+              <label for="name">Enter Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Enter Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Type your message here" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <br /><br /><br /><br />
+      </div>
+    </main>
+  </div>
+</body>
+</html>
