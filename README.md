@@ -2,7 +2,7 @@
 
 An Automatic Evaluation System for Interview Applicant Performance Using Different Modalities
 
-![InterviewSense Cover](InterviewSense%20Cover.png
+![InterviewSense Cover](InterviewSense%20Cover.png)
 
 ## Overview 📋
 InterviewSense is an innovative system designed to automatically evaluate job applicants' interview performance by analyzing multiple aspects:
